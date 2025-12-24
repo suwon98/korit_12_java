@@ -14,33 +14,35 @@ public class Method04ScoreCalc2 {
     // 1. 합을 구하는 메서드
     public static double calcSum(int numOfSubs) {
         double sum = 0;
-        numOfSubs = calcAvg();
         Scanner scanner = new Scanner(System.in);
         for(int i = 0; i < numOfSubs; i++) {
             System.out.print((i + 1) + " 과목의 점수를 입력하세요 >>> ");
             sum += scanner.nextDouble();
         }
-        System.out.println(sum);
+//        System.out.println(sum);
         return sum;
     }
 
     // 2. 평균을 구하는 메서드
     // 여기서 스캐너로 과목수를 입력 받습니다.
-    public static int calcAvg() {
+    public static double calcAvg() {
         double avg = 0;
         int numOfSubs = 0;
-        double sum = calcSum(numOfSubs); // 그리고 합 구할 때 여기서 argument로 과목 수를 보내줘야 합니다. -> 그러면 정의 영역도 수정해야함
+
+         // 그리고 합 구할 때 여기서 argument로 과목 수를 보내줘야 합니다. -> 그러면 정의 영역도 수정해야함
         // 그리고 return으로 나온 합을 가지고 sum / 과목수 를 해서 평균을 구하면 답이 나올 것 같습니다.
         Scanner scanner = new Scanner(System.in);
         System.out.print("몇 개의 과목을 입력하시겠습니까? >>> ");
         numOfSubs = scanner.nextInt();
+        double sum = calcSum(numOfSubs);
         avg = (sum/numOfSubs);
-        return numOfSubs;
+        return avg;
     }
     // 3. 합과 평균을 안내해주는 매개변수를 넣은 메서드
 
     public static void main(String[] args) {
         // method 호출 영역
-        calcAvg();
+        ;
+        System.out.println(calcAvg());
     }
 }
