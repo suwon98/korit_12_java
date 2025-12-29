@@ -19,7 +19,6 @@ public class Method04ScoreCalc2 {
             System.out.print((i + 1) + " 과목의 점수를 입력하세요 >>> ");
             sum += scanner.nextDouble();
         }
-//        System.out.println(sum);
         return sum;
     }
 
@@ -36,6 +35,7 @@ public class Method04ScoreCalc2 {
         numOfSubs = scanner.nextInt();
         double sum = calcSum(numOfSubs);
         avg = (sum/numOfSubs);
+        System.out.println("총합은" + sum + "이며, 평균은 " + avg + "입니다.");
         return avg;
     }
     // 3. 합과 평균을 안내해주는 매개변수를 넣은 메서드
@@ -43,6 +43,6 @@ public class Method04ScoreCalc2 {
     public static void main(String[] args) {
         // method 호출 영역
         ;
-        System.out.println(calcAvg());
+        calcAvg();
     }
 }
