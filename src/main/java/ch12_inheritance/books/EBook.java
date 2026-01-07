@@ -1,10 +1,10 @@
 package ch12_inheritance.books;
 
-public class Ebook extends Book{
+public class EBook extends Book{
     private double fileSize;
     private String format;
 
-    public Ebook(String title, String author, double fileSize, String format) {
+    public EBook(String title, String author, double fileSize, String format) {
         super(title, author);
         this.fileSize = fileSize;
         this.format = format;
