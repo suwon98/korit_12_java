@@ -52,6 +52,22 @@ public class Main {
             tvRemoteController.onPressedVolumeDown();을 호출하면
             볼륨을 한 칸 내립니다. 가 출력될 수 있도록 작성하시오.
          */
-        
+
+        AirConditionerController airConditionerController = new AirConditionerController(
+                new PowerButton(),
+                new ModeChangeButton(),
+                new TemperatureDownButton(),
+                new TemperatureUpButton()
+        );
+
+        airConditionerController.onPressedPowerButton();
+        airConditionerController.onPressedDownTemperatureDownButton();
+        airConditionerController.onDownTemperatureDownButton();
+        airConditionerController.onPressedUPTemperatureUpButton();
+        airConditionerController.onUPTemperatureUpButton();
+        airConditionerController.onPressedModeChangeButton();
+        airConditionerController.onPressedModeChangeButton();
+        airConditionerController.onPressedPowerButton();
+
     }
 }
